@@ -1,0 +1,13 @@
+# Planilhas operacionais — dados sensíveis, não versionar
+dados/**/*.xlsx
+dados/**/*.xls
+dados/**/*.csv
+
+# Análises geradas — saídas locais
+analises/relatorios/*.pdf
+analises/dashboards/*.html
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.tmp
