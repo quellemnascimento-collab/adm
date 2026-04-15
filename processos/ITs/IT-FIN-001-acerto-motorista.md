@@ -57,15 +57,17 @@ Padronizar o processo de acerto de motorista, garantindo que os valores recebido
 
 ---
 
-### Etapa 3 — Dar Baixa no TOTVS Winthor
+### Etapa 3 — Lançar Data do Canhoto no TOTVS Winthor
 
 | # | Ação | Detalhe |
 |---|---|---|
 | 9 | Acessar o TOTVS Winthor | Fazer login com usuário e senha |
-| 10 | Acessar a **Rotina 421** | Baixa de títulos / Contas a receber |
-| 11 | Localizar o título pelo número da NF ou cliente | Conferir valor e vencimento antes de baixar |
-| 12 | Informar os dados do pagamento | Data, valor recebido e forma de pagamento |
-| 13 | Confirmar a baixa | Verificar se o status do título mudou para "Baixado" |
+| 10 | Acessar a **Rotina 421** | "Lançar Data do Canhoto na Nota Fiscal" |
+| 11 | Pesquisar a NF com **F9 - Pesquisar** | Filtrar por Num. Nota, Data Saída ou Cliente |
+| 12 | Localizar a NF na lista de resultados | Conferir Num. Nota, Cliente e Vl. Total antes de prosseguir |
+| 13 | Preencher o campo **Data Canhoto** | Informar a data em que o canhoto foi recebido do motorista |
+| 14 | Confirmar o lançamento | A data do canhoto ficará registrada na NF |
+| 15 | Se houver múltiplas NFs com a mesma data, usar **F11** | F11 preenche os demais registros selecionados com a mesma data do canhoto |
 
 ---
 
@@ -73,9 +75,9 @@ Padronizar o processo de acerto de motorista, garantindo que os valores recebido
 
 | # | Ação | Detalhe |
 |---|---|---|
-| 14 | Realizar a contagem física do dinheiro | Conferir se o total em espécie bate com os lançamentos do dia |
-| 15 | Arquivar os canhotos | Organizar fisicamente por data e número de NF |
-| 16 | Fechar o caixa | Registrar saldo final no Controle de Caixa ES |
+| 16 | Realizar a contagem física do dinheiro | Conferir se o total em espécie bate com os lançamentos do dia |
+| 17 | Arquivar os canhotos | Organizar fisicamente por data e número de NF |
+| 18 | Fechar o caixa | Registrar saldo final no Controle de Caixa ES |
 
 ---
 
@@ -84,7 +86,7 @@ Padronizar o processo de acerto de motorista, garantindo que os valores recebido
 - **Divergência de valor:** Se o valor pago pelo motorista for diferente do valor da nota, registrar a diferença e comunicar o supervisor imediatamente — não lançar valor errado
 - **Canhoto sem assinatura:** Não acertar valores sem canhoto assinado pelo cliente
 - **Nota não encontrada na planilha:** Verificar se a NF está na planilha correta do mês; se não estiver, acionar o responsável pela emissão
-- **Baixa duplicada no TOTVS:** Antes de dar baixa na rotina 421, sempre confirmar que o título não está já baixado
+- **Data do canhoto já lançada:** Antes de preencher, verificar na pesquisa (F9) se a NF já possui data de canhoto registrada — evitar duplicidade de lançamento
 
 ---
 
@@ -94,7 +96,7 @@ O processo foi executado corretamente quando:
 
 - [ ] Todos os campos do Controle de Notas Mensal estão preenchidos para o canhoto recebido
 - [ ] O valor lançado no Controle de Caixa ES bate com o valor do canhoto
-- [ ] O título está com status **Baixado** na rotina 421 do TOTVS
+- [ ] A **Data do Canhoto** está registrada na NF na rotina 421 do TOTVS
 - [ ] O saldo final do caixa confere com a contagem física do dinheiro
 - [ ] O canhoto está arquivado fisicamente
 
@@ -105,7 +107,7 @@ O processo foi executado corretamente quando:
 | Erro | Causa Provável | Correção |
 |---|---|---|
 | Valor pago diverge do valor da NF | Desconto concedido na entrega ou troco errado | Registrar diferença, comunicar supervisor, não fechar sem aprovação |
-| Título não encontrado na rotina 421 | NF não lançada no financeiro do TOTVS | Acionar responsável pelo faturamento para incluir o título |
+| NF não encontrada na rotina 421 (F9) | NF com data de saída diferente do filtro informado | Ajustar o filtro **Data Saída** ou buscar pelo Num. Nota diretamente |
 | Canhoto sem número legível | Canhoto danificado ou preenchimento incorreto | Consultar o número da NF na planilha pelo nome do cliente e data |
 | Planilha travada (somente leitura) | Outro usuário com o arquivo aberto | Aguardar liberação ou solicitar fechamento do arquivo |
 | Saldo do caixa não fecha | Lançamento duplicado ou valor errado | Revisar todos os lançamentos do dia antes de fechar |
@@ -124,4 +126,4 @@ O processo foi executado corretamente quando:
 
 - Fluxo: `processos/fluxos/fluxo_financeiro.md`
 - Prompt de conciliação: `prompts/conciliacao.prompt.md`
-- TOTVS Winthor — Rotina 421: Baixa de Títulos a Receber
+- TOTVS Winthor — Rotina 421: Lançar Data do Canhoto na Nota Fiscal
