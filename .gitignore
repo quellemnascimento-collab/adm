@@ -6,8 +6,8 @@ dados/**/*.csv
 # Análises geradas — saídas locais
 analises/dashboards/*.html
 
-# Script auxiliar de geração de PDF
-analises/relatorios/gerar_pdf.py
+# Outputs de dashboards locais
+analises/dashboards/*.html
 
 # Sistema
 .DS_Store

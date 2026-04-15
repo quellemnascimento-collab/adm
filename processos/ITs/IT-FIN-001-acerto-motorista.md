@@ -1,16 +1,10 @@
-# IT-FIN-001 — Acerto de Motorista (Contas a Receber)
-
-**Área:** Financeiro  
-**Sistema:** TOTVS Winthor + Excel  
-**Responsável:** Assistente Financeiro / Caixa  
-**Revisão:** 2026-04
-
 ---
-
-## Objetivo
-
-Padronizar o processo de acerto de motorista, garantindo que os valores recebidos via canhoto sejam corretamente registrados no controle de notas, lançados no caixa e baixados no TOTVS Winthor — sem divergências entre os sistemas.
-
+titulo: "IT-FIN-001 — Acerto de Motorista (Contas a Receber)"
+nome_exibicao: "IT de Acerto de Motorista"
+objetivo: "Padronizar o processo de acerto de motorista, garantindo que os valores recebidos via canhoto sejam registrados no controle de notas, lançados no caixa e com a data do canhoto registrada no TOTVS Winthor."
+responsavel: "Assistente Financeiro / Caixa"
+sistema: "TOTVS Winthor + Excel"
+revisao: "2026-04"
 ---
 
 ## Pré-requisitos
@@ -67,7 +61,7 @@ Padronizar o processo de acerto de motorista, garantindo que os valores recebido
 | 12 | Localizar a NF na lista de resultados | Conferir Num. Nota, Cliente e Vl. Total antes de prosseguir |
 | 13 | Preencher o campo **Data Canhoto** | Informar a data em que o canhoto foi recebido do motorista |
 | 14 | Confirmar o lançamento | A data do canhoto ficará registrada na NF |
-| 15 | Se houver múltiplas NFs com a mesma data, usar **F11** | F11 preenche os demais registros selecionados com a mesma data do canhoto |
+| 15 | Para múltiplas NFs com a mesma data, usar **F11** | F11 preenche os demais registros selecionados com a mesma data do canhoto |
 
 ---
 
