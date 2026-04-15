@@ -4,8 +4,10 @@ dados/**/*.xls
 dados/**/*.csv
 
 # Análises geradas — saídas locais
-analises/relatorios/*.pdf
 analises/dashboards/*.html
+
+# Script auxiliar de geração de PDF
+analises/relatorios/gerar_pdf.py
 
 # Sistema
 .DS_Store
